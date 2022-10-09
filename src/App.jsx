@@ -1,10 +1,27 @@
-import React from "react"
+import React from 'react'
+import { HiInformationCircle } from 'react-icons/hi'
+import Card from './components/Card'
 
-function App() {
+function App () {
   return (
-    <h1>Frontend Mentor | Challenges</h1>
+    <div className='principal'>
+      <div className='principal__container'>
+        <div className='principal__info'>
+          <span className='principal__info-text'>
+            Learn about our challenge types
+            <HiInformationCircle className='principal__info-icon' />
+          </span>
+        </div>
+        <div className='principal__cards'>
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+        </div>
+      </div>
+    </div>
   )
 }
 
 export default App
-
