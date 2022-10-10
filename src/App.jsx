@@ -20,16 +20,18 @@ function App () {
               <span className='principal__info-btn_text'>
                 Learn about our challenge types
               </span>
-              <HiInformationCircle className='principal__info-icon' />
+              <HiInformationCircle className='principal__info-btn_icon' />
             </div>
           </button>
         </div>
         <div className='principal__cards'>
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          <ul className='principal__cards-list'>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </ul>
         </div>
       </div>
     </div>

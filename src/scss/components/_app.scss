@@ -1,7 +1,87 @@
 @use '../utils/colors' as c;
 
 .principal {
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 4rem;
+
+  &__container {
+    display: grid;
+    row-gap: 1rem;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-tags {
+      display: flex;
+      column-gap: 1rem;
+      flex-wrap: wrap;
+
+      &_item {
+        display: flex;
+        align-items: center;
+        column-gap: .5rem;
+        font-size: .8rem;
+        margin-bottom: .5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-style: italic;
+        background-color: c.$blue-color;
+        color: c.$white;
+        border-radius: 5rem;
+        padding: .3rem .5rem;
+      }
+
+      &_btn {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: c.$white;
+        font-size: 1.2rem;
+      }
+    }
+
+    &-btn {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: color .3s ease-in-out;
+
+      &:hover {
+        color: c.$aux-color-two;
+      }
+
+      &_container {
+        display: inline-flex;
+        column-gap: .2rem;
+      }
+
+      &_icon {
+        color: c.$lightblue-color;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  &__cards {
+    width: 100%;
+
+    &-list {
+      display: flex;
+      flex-grow: 1;
+      flex-wrap: wrap;
+      margin: -1.25rem;
+      width: calc(100% + 2.5rem);
+    }
+  }
 }
 

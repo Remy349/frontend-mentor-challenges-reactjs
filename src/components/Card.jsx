@@ -5,13 +5,13 @@ import CardPlan from './CardPlan'
 
 function Card () {
   return (
-    <article className='card'>
+    <li className='card'>
       <div className='card__container'>
         <CardPlan />
         <CardImage />
         <CardContent />
       </div>
-    </article>
+    </li>
   )
 }
 
