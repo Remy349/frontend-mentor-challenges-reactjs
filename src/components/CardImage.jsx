@@ -1,4 +1,5 @@
 import React from 'react'
+import newbieImg from '../img/newbie-img.jpg'
 
 function CardImage () {
   return (
@@ -6,8 +7,8 @@ function CardImage () {
       <a href='#' className='card__image-link'>
         <img
           className='card__image-img'
-          src=''
-          alt=''
+          src={newbieImg}
+          alt='Newbiew Challenge Image'
         />
       </a>
     </div>

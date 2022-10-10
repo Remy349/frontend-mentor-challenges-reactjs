@@ -1,8 +1,27 @@
+@use '../utils/colors' as c;
+@use '../utils/fonts' as f;
+
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Heebo:wght@400;500;900&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  background-color: c.$bg-color;
+  color: c.$black;
+  font-family: f.$barlow;
+}
+
+.main {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 

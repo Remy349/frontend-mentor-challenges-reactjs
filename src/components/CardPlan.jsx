@@ -4,7 +4,7 @@ function CardPlan () {
   return (
     <div className='card__plan'>
       <div className='card__plan-container'>
-        <span className='card__plan-type'></span>
+        <span className='card__plan-type'>Premium</span>
       </div>
     </div>
   )
