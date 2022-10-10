@@ -14,10 +14,6 @@ function App () {
         </div>
         <div className='principal__cards'>
           <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
         </div>
       </div>
     </div>
