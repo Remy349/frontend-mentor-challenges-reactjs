@@ -1,14 +1,13 @@
 import React from 'react'
-import newbieImg from '../img/newbie-img.jpg'
 
-function CardImage () {
+function CardImage (props) {
   return (
     <div className='card__image'>
       <a href='#' className='card__image-link'>
         <img
           className='card__image-img'
-          src={newbieImg}
-          alt='Newbiew Challenge Image'
+          src={props.image.url}
+          alt={props.image.alt}
         />
       </a>
     </div>

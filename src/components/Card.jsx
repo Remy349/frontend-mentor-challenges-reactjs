@@ -3,12 +3,12 @@ import CardContent from './CardContent'
 import CardImage from './CardImage'
 import CardPlan from './CardPlan'
 
-function Card () {
+function Card (props) {
   return (
     <li className='card'>
       <div className='card__container'>
         <CardPlan />
-        <CardImage />
+        <CardImage image={props.image} />
         <CardContent />
       </div>
     </li>

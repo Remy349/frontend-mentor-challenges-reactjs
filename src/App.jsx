@@ -2,6 +2,7 @@ import React from 'react'
 import { HiInformationCircle } from 'react-icons/hi'
 import AppTags from './components/AppTags'
 import Card from './components/Card'
+import { cardData } from './data.js'
 
 function App () {
   return (
@@ -26,11 +27,11 @@ function App () {
         </div>
         <div className='principal__cards'>
           <ul className='principal__cards-list'>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            <Card image={cardData[0].image} />
+            <Card image={cardData[1].image} />
+            <Card image={cardData[2].image} />
+            <Card image={cardData[3].image} />
+            <Card image={cardData[4].image} />
           </ul>
         </div>
       </div>

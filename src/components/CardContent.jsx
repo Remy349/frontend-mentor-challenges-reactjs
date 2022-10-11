@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CardContent () {
+function CardContent (props) {
   return (
     <div className='card__content'>
       <h3 className='card__content-title'>
