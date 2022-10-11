@@ -9,11 +9,11 @@ function App () {
       <div className='principal__container container'>
         <div className='principal__info'>
           <ul className='principal__info-tags'>
-            <AppTags />
-            <AppTags />
-            <AppTags />
-            <AppTags />
-            <AppTags />
+            <AppTags difficulty='Newbie' />
+            <AppTags difficulty='Junior' />
+            <AppTags difficulty='Intermediate' />
+            <AppTags difficulty='Advanced' />
+            <AppTags difficulty='Guru' />
           </ul>
           <button type='button' className='principal__info-btn'>
             <div className='principal__info-btn_container'>

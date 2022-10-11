@@ -20,21 +20,133 @@
     top: 1rem;
     right: 1rem;
     z-index: 10;
+
+    &-type {
+      background-color: c.$blue-color;
+      color: c.$white;
+      text-transform: uppercase;
+      font-size: .8rem;
+      font-weight: 700;
+      padding: .3rem .6rem;
+      letter-spacing: .1rem;
+      border-radius: 1rem;
+    }
   }
 
   &__image {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 6rem;
+      z-index: 1;
+      background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+      pointer-events: none;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+
     &-link {
       border-top-left-radius: 1rem;
       border-top-right-radius: 1rem;
       overflow: hidden;
+      display: block;
     }
 
     &-img {
       transition: transform .3s ease-in-out;
       object-fit: cover;
+      display: block;
 
       &:hover {
         transform: scale(1.05);
+      }
+    }
+  }
+
+  &__content {
+    padding: 1.5rem;
+
+    &-title {
+      cursor: pointer;
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+
+      &:hover {
+        text-decoration: underline;
+      }
+
+      &_link {
+        color: c.$black;
+      }
+    }
+
+    &-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+
+      &_tools {
+        &_list {
+          display: inline-flex;
+          column-gap: .5rem;
+        }
+
+        &_item:nth-child(1) {
+          color: c.$lightblue-color;
+          font-weight: 700;
+          font-size: 1.15rem;
+        }
+
+        &_item:nth-child(2) {
+          color: c.$blue-color;
+          font-weight: 700;
+          font-size: 1.15rem;
+        }
+
+        &_item:nth-child(3) {
+          color: c.$pink-color;
+          font-weight: 700;
+          font-size: 1.15rem;
+        }
+      }
+
+      &_difficulty {
+        &_container {
+          border: 1px solid c.$lightblue-color;
+          border-radius: .3rem;
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+        }
+
+        &_number {
+          color: c.$white;
+          background-color: c.$lightblue-color;
+          padding: .13rem .5rem;
+          font-weight: 700;
+          font-size: .85rem;
+        }
+
+        &_level {
+          color: c.$lightblue-color;
+          background-color: transparent;
+          padding: .13rem .5rem;
+          font-weight: 700;
+          text-transform: uppercase;
+          font-size: .85rem;
+          letter-spacing: .02rem;
+        }
+      }
+    }
+
+    &-desc {
+      &_text {
+        font-family: f.$heebo;
+        color: c.$aux-color-two;
       }
     }
   }

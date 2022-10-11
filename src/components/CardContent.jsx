@@ -24,8 +24,8 @@ function CardContent () {
       </div>
       <div className='card__content-desc'>
         <p className='card__content-desc_text'>
-          This responsive page is perfect if you've learned the 
-          fundamentals of HTML & CSS, completed a couple of smaller projects, 
+          This responsive page is perfect if you've learned the
+          fundamentals of HTML & CSS, completed a couple of smaller projects,
           and want to take it up a notch.
         </p>
       </div>
