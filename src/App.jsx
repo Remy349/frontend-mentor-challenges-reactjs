@@ -27,11 +27,31 @@ function App () {
         </div>
         <div className='principal__cards'>
           <ul className='principal__cards-list'>
-            <Card image={cardData[0].image} />
-            <Card image={cardData[1].image} />
-            <Card image={cardData[2].image} />
-            <Card image={cardData[3].image} />
-            <Card image={cardData[4].image} />
+            <Card
+              plan={cardData[0].plan}
+              image={cardData[0].image}
+              content={cardData[0].content}
+            />
+            <Card
+              plan={cardData[1].plan}
+              image={cardData[1].image}
+              content={cardData[1].content}
+            />
+            <Card
+              plan={cardData[2].plan}
+              image={cardData[2].image}
+              content={cardData[2].content}
+            />
+            <Card
+              plan={cardData[3].plan}
+              image={cardData[3].image}
+              content={cardData[3].content}
+            />
+            <Card
+              plan={cardData[4].plan}
+              image={cardData[4].image}
+              content={cardData[4].content}
+            />
           </ul>
         </div>
       </div>

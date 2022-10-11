@@ -1,19 +1,71 @@
 import React from 'react'
 
 function CardContent (props) {
+  const toolsList = () => {
+    let element
+
+    if (props.content.info.tools.hasOwnProperty('html') &&
+      props.content.info.tools.hasOwnProperty('css')) {
+      element = (
+        <ul className='card__content-info_tools_list'>
+          <li className='card__content-info_tools_item'>
+            {props.content.info.tools.html}
+          </li>
+          <li className='card__content-info_tools_item'>
+            {props.content.info.tools.css}
+          </li>
+        </ul>
+      )
+    }
+
+    if (props.content.info.tools.hasOwnProperty('js')) {
+      element = (
+        <ul className='card__content-info_tools_list'>
+          <li className='card__content-info_tools_item'>
+            {props.content.info.tools.html}
+          </li>
+          <li className='card__content-info_tools_item'>
+            {props.content.info.tools.css}
+          </li>
+          <li className='card__content-info_tools_item'>
+            {props.content.info.tools.js}
+          </li>
+        </ul>
+      )
+    }
+
+    if (props.content.info.tools.hasOwnProperty('api')) {
+      element = (
+        <ul className='card__content-info_tools_list'>
+          <li className='card__content-info_tools_item'>
+            {props.content.info.tools.html}
+          </li>
+          <li className='card__content-info_tools_item'>
+            {props.content.info.tools.css}
+          </li>
+          <li className='card__content-info_tools_item'>
+            {props.content.info.tools.js}
+          </li>
+          <li className='card__content-info_tools_item'>
+            {props.content.info.tools.api}
+          </li>
+        </ul>
+      )
+    }
+
+    return element
+  }
+
   return (
     <div className='card__content'>
       <h3 className='card__content-title'>
         <a href='#' className='card__content-title_link'>
-          Skilled e-learning landing page
+          {props.content.title}
         </a>
       </h3>
       <div className='card__content-info'>
         <div className='card__content-info_tools'>
-          <ul className='card__content-info_tools_list'>
-            <li className='card__content-info_tools_item'>HTML</li>
-            <li className='card__content-info_tools_item'>CSS</li>
-          </ul>
+          {toolsList()}
         </div>
         <div className='card__content-info_difficulty'>
           <span className='card__content-info_difficulty_container'>
@@ -24,9 +76,7 @@ function CardContent (props) {
       </div>
       <div className='card__content-desc'>
         <p className='card__content-desc_text'>
-          This responsive page is perfect if you've learned the
-          fundamentals of HTML & CSS, completed a couple of smaller projects,
-          and want to take it up a notch.
+          {props.content.desc}
         </p>
       </div>
     </div>

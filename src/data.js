@@ -7,7 +7,7 @@ import guruImg from './img/guru-img.jpg'
 export const cardData = [
   {
     plan: {
-      premium: 'Premium'
+      type: 'Premium'
     },
     image: {
       url: newbieImg,
@@ -30,7 +30,7 @@ export const cardData = [
   },
   {
     plan: {
-      premium: 'Free'
+      type: 'Free'
     },
     image: {
       url: juniorImg,
@@ -54,7 +54,7 @@ export const cardData = [
   },
   {
     plan: {
-      premium: 'Premium'
+      type: 'Premium'
     },
     image: {
       url: intermediateImg,
@@ -78,7 +78,7 @@ export const cardData = [
   },
   {
     plan: {
-      premium: 'Free'
+      type: 'Free'
     },
     image: {
       url: advancedImg,
@@ -103,7 +103,7 @@ export const cardData = [
   },
   {
     plan: {
-      premium: 'Premium'
+      type: 'Premium'
     },
     image: {
       url: guruImg,

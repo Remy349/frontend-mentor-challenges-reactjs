@@ -7,9 +7,9 @@ function Card (props) {
   return (
     <li className='card'>
       <div className='card__container'>
-        <CardPlan />
+        <CardPlan plan={props.plan} />
         <CardImage image={props.image} />
-        <CardContent />
+        <CardContent content={props.content} />
       </div>
     </li>
   )
