@@ -4,7 +4,13 @@ function CardPlan (props) {
   return (
     <div className='card__plan'>
       <div className='card__plan-container'>
-        <span className='card__plan-type'>
+        <span
+          className={
+            (props.plan.type === 'Premium')
+              ? 'card__plan-premium'
+              : 'card__plan-free'
+          }
+        >
           {props.plan.type}
         </span>
       </div>

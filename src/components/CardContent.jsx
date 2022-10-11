@@ -1,6 +1,77 @@
 import React from 'react'
 
 function CardContent (props) {
+  const difficultyLevel = () => {
+    let element
+
+    if (props.content.info.difficulty.number === '1') {
+      element = (
+        <span className='card__content-info_difficulty_container one'>
+          <span className='card__content-info_difficulty_one'>
+            {props.content.info.difficulty.number}
+          </span>
+          <span className='card__content-info_difficulty_newbie'>
+            {props.content.info.difficulty.level}
+          </span>
+        </span>
+      )
+    }
+
+    if (props.content.info.difficulty.number === '2') {
+      element = (
+        <span className='card__content-info_difficulty_container two'>
+          <span className='card__content-info_difficulty_two'>
+            {props.content.info.difficulty.number}
+          </span>
+          <span className='card__content-info_difficulty_junior'>
+            {props.content.info.difficulty.level}
+          </span>
+        </span>
+      )
+    }
+
+    if (props.content.info.difficulty.number === '3') {
+      element = (
+        <span className='card__content-info_difficulty_container three'>
+          <span className='card__content-info_difficulty_three'>
+            {props.content.info.difficulty.number}
+          </span>
+          <span className='card__content-info_difficulty_intermediate'>
+            {props.content.info.difficulty.level}
+          </span>
+        </span>
+      )
+    }
+
+    if (props.content.info.difficulty.number === '4') {
+      element = (
+        <span className='card__content-info_difficulty_container four'>
+          <span className='card__content-info_difficulty_four'>
+            {props.content.info.difficulty.number}
+          </span>
+          <span className='card__content-info_difficulty_advanced'>
+            {props.content.info.difficulty.level}
+          </span>
+        </span>
+      )
+    }
+
+    if (props.content.info.difficulty.number === '5') {
+      element = (
+        <span className='card__content-info_difficulty_container five'>
+          <span className='card__content-info_difficulty_five'>
+            {props.content.info.difficulty.number}
+          </span>
+          <span className='card__content-info_difficulty_guru'>
+            {props.content.info.difficulty.level}
+          </span>
+        </span>
+      )
+    }
+
+    return element
+  }
+
   const toolsList = () => {
     let element
 
@@ -68,10 +139,7 @@ function CardContent (props) {
           {toolsList()}
         </div>
         <div className='card__content-info_difficulty'>
-          <span className='card__content-info_difficulty_container'>
-            <span className='card__content-info_difficulty_number'>1</span>
-            <span className='card__content-info_difficulty_level'>newbie</span>
-          </span>
+          {difficultyLevel()}
         </div>
       </div>
       <div className='card__content-desc'>

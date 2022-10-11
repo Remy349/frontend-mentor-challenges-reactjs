@@ -23,9 +23,20 @@
     right: 1rem;
     z-index: 10;
 
-    &-type {
+    &-premium {
       background-color: c.$blue-color;
       color: c.$white;
+      text-transform: uppercase;
+      font-size: .8rem;
+      font-weight: 700;
+      padding: .3rem .6rem;
+      letter-spacing: .1rem;
+      border-radius: 1rem;
+    }
+
+    &-free {
+      background-color: c.$aux-color-one;
+      color: c.$blue-color;
       text-transform: uppercase;
       font-size: .8rem;
       font-weight: 700;
@@ -120,30 +131,95 @@
 
       &_difficulty {
         &_container {
-          border: 1px solid c.$lightblue-color;
           border-radius: .3rem;
           display: inline-flex;
           justify-content: center;
           align-items: center;
           overflow: hidden;
+
+          &.one {
+            border: 1px solid c.$lightblue-color;
+          }
+
+          &.two {
+            border: 1px solid c.$green-color;
+          }
+
+          &.three {
+            border: 1px solid c.$yellow-color;
+          }
+
+          &.four {
+            border: 1px solid c.$orange-color;
+          }
+
+          &.five {
+            border: 1px solid c.$red-color;
+          }
         }
 
-        &_number {
-          color: c.$white;
-          background-color: c.$lightblue-color;
+        &_one,
+        &_two,
+        &_three,
+        &_four,
+        &_five {
           padding: .13rem .5rem;
           font-weight: 700;
           font-size: .85rem;
+          color: c.$white;
         }
 
-        &_level {
-          color: c.$lightblue-color;
+        &_one {
+          background-color: c.$lightblue-color;
+        }
+
+        &_two {
+          background-color: c.$green-color;
+        }
+
+        &_three {
+          background-color: c.$yellow-color;
+        }
+
+        &_four {
+          background-color: c.$orange-color;
+        }
+
+        &_five {
+          background-color: c.$red-color;
+        }
+
+        &_newbie,
+        &_junior,
+        &_intermediate,
+        &_advanced,
+        &_guru {
           background-color: transparent;
           padding: .13rem .5rem;
           font-weight: 700;
           text-transform: uppercase;
           font-size: .85rem;
           letter-spacing: .02rem;
+        }
+
+        &_newbie {
+          color: c.$lightblue-color;
+        }
+
+        &_junior {
+          color: c.$green-color;
+        }
+
+        &_intermediate {
+          color: c.$yellow-color;
+        }
+
+        &_advanced {
+          color: c.$orange-color;
+        }
+
+        &_guru {
+          color: c.$red-color;
         }
       }
     }
